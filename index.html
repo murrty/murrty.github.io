@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style>
+            body {
+                background-color: #101114;
+                color: #bbb;
+            }
+            p {
+                color: #bbb;
+                text-shadow: 1px 1px 2px black; 
+            }
+            
+            a {
+                color: #2466b3;
+            }
+            
+            .dbottom {
+                position:absolute;
+                bottom:0%;
+                left: 65%;
+                z-index: -1;
+            }
+            
+            /* totally not stolen */
+            
+            .newscanlines {
+                position: relative;
+                overflow: hidden;
+            }
+            .newscanlines:before, .newscanlines:after {
+                display: block;
+                pointer-events: none;
+                content: '';
+                position: absolute;
+            }
+            .newscanlines:before {
+                width: 100%;
+                height: 2px;
+                z-index: 2147483649;
+                background: rgba(0, 0, 0, 0.1);
+                opacity: 0.5;
+                -webkit-animation: none;
+                animation: none;
+            }
+            .newscanlines:after {
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                z-index: 2147483648;
+                background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, 0.1) 51%);
+                background-size: 100% 4px;
+                -webkit-animation: newscanlines 1s steps(60) infinite;
+                animation: newscanlines 1s steps(60) infinite;
+            }
+
+            /* ANIMATE UNIQUE newscanline */
+            @-webkit-keyframes newscanline {
+                0% {
+                    -webkit-transform: translate3d(0, 200000%, 0);
+                    transform: translate3d(0, 200000%, 0);
+                }
+            }
+            @keyframes newscanline {
+                0% {
+                    -webkit-transform: translate3d(0, 200000%, 0);
+                    transform: translate3d(0, 200000%, 0);
+                }
+            }
+            @-webkit-keyframes newscanlines {
+                0% {
+                    background-position: 0 50%;
+                }
+            }
+            @keyframes newscanlines {
+                0% {
+                    background-position: 0 50%;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <div>
+            <p>hello</p>
+        </div>
+        <br />
+        <div>
+            <p>check out <a href="https://github.com/murrty/youtube-dl-gui/releases/latest/download/youtube-dl-gui.zip">youtube-dl-gui</a>, a multi-site video downloader. <a target="_blank" href="https://github.com/murrty/youtube-dl-gui">(github repo)</a></p>
+            
+            <p>or perhaps <a href="https://github.com/murrty/YChanEx/releases/latest/download/ychanex.zip">ychanex</a>, a *chan board downloader. <a target="_blank" href="https://github.com/murrty/YChanEx">(github repo)</a></p>
+            
+            <br />
+            
+            <p>i have more going on at my <a href="https://github.com/murrty">github page</a>, but here are some firefox extensions i've also been working on:</p>
+            <p><a href="https://github.com/murrty/address-bar-shortcuts/releases/latest/download/address_bar_shortcuts.xpi">address bar shortcuts</a>, Redirect to subreddits, reddit users, and *chan boards using the address bar. <a target="_blank" href="https://github.com/murrty/address-bar-shortcuts">(github repo)</a></p>
+            <p><a href="https://github.com/murrty/address-bar-shortcuts/releases/latest/download/omni-all.xpi">address bar shortcuts (all) (omni)</a>, the same as above but uses firefox's <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/omnibox">omnibox feature</a>. <a target="_blank" href="https://github.com/murrty/address-bar-shortcuts/tree/omnibox-all">(github branch)</a></p>
+            <p><a href="https://github.com/murrty/address-bar-shortcuts/releases/latest/download/omni-4chan.xpi">address bar shortcuts (4chan) (omni)</a>, which only supports redirecting to a 4chan board. <a target="_blank" href="https://github.com/murrty/address-bar-shortcuts/tree/omnibox-4chan">(github branch)</a></p>
+            <p><a href="https://github.com/murrty/address-bar-shortcuts/releases/latest/download/omni-8chan.xpi">address bar shortcuts (8chan) (omni)</a>, which only supports redirecting to a 8chan board. <a target="_blank" href="https://github.com/murrty/address-bar-shortcuts/tree/omnibox-8chan">(github branch)</a></p>
+            <p><a href="https://github.com/murrty/address-bar-shortcuts/releases/latest/download/omni-reddit-sub.xpi">address bar shortcuts (reddit-sub) (omni)</a>, which only supports redirecting to a subreddit. <a target="_blank" href="https://github.com/murrty/address-bar-shortcuts/tree/omnibox-reddit-sub">(github branch)</a></p>
+            <p><a href="https://github.com/murrty/address-bar-shortcuts/releases/latest/download/omni-reddit-user.xpi">address bar shortcuts (reddit-user) (omni)</a>, which only supports redirecting to a reddit user. <a target="_blank" href="https://github.com/murrty/address-bar-shortcuts/tree/omnibox-reddit-user">(github branch)</a></p>
+        </div>
+        
+        <img class="dbottom" width="250px" src="aaa.png" />
+    </body>
+</html>
